@@ -1,0 +1,30 @@
+import random
+number=random.randint(1,100)
+guess=False
+count=0
+
+while guess==False:
+    try:
+        print("Rate die Zahl! Bitte nur ganze Zahlen!")
+        numberguess=int(input())
+        if numberguess <1 or numberguess >100:
+            print("Bitte eine Zahl zwischen 1 und 100 wählen!")
+        elif numberguess==number:
+            print("Richtig geraten!")
+            guess=True
+        elif numberguess < number:
+            print("Deine Zahl ist zu klein")
+                
+        else: 
+            print("Deine Zahl ist zu groß") 
+        count=count+1
+   
+    except:
+        print("Du hast keine ganze Zahl eingegeben!")
+        count=count+1
+    
+
+points=100-(count-1)
+print(f"Die richtige Zahl ist {number}")
+print(f"Du hast {count} Versuche benötigt")
+print(f"Deine Punktzahl: {points}")

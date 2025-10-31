@@ -1,0 +1,273 @@
+:root{
+    ---color1: yellow;
+    ---color2: black;
+    ---color3: red;
+    ---color4: white;
+}
+
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+a{
+    color: var(---color2);
+    font-weight: lighter;
+    text-decoration: none;
+}
+.top-nav{
+    display: block;
+    background-color: var(---color1);
+    height: 50px;
+    font-size: 24px;
+    padding-top: 16px;
+    
+}
+.top-nav a{
+    font-size: 24px;
+    border: 1px solid black;
+    margin-left: 10px;
+    height: 100%;
+}
+.top-nav a:hover{
+    background-color: var(---color2);
+    color: var(---color1);
+}
+#active-page{
+  
+    width: 50px;
+    background-color: var(---color3);
+    color: var(---color4);
+    content: ">";
+}
+
+.gameList{
+    display: block;
+    width: 250px;
+    background-color: aqua;
+}
+.gameList a:hover{
+    color: white;
+    background-color: green;
+}
+
+/* Würfelspiel*/
+.game{
+    margin-top: 50px;
+}
+.sessionPoints{
+    width: 50px;
+    border: 1px solid black;
+}
+.gamePoints{
+    font-size: 32px;
+    color: yellow;
+    border: 1px solid black;
+    min-width: 50px;
+    text-align: center;
+}
+.diceValue{
+    
+    font-size: 30px;
+    
+}
+.standard-container{
+    padding: 10px;
+}
+.player{
+    display: block;
+    float: left;
+    border: 1px solid black;
+    padding: 10px;
+    height: 312px;
+    margin: 20px;
+}
+
+.results{
+    margin-top: 20px;
+    height: 120px;
+    width: 300px;
+}
+.CPU{
+    display: block;
+    float: left;
+    border: 1px solid black;
+    padding: 10px;
+    height: 312px;
+    margin: 20px;
+}
+
+.CPU-decission{
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+}
+
+.sessionPointsCPU{
+    width: 50px;
+    border: 1px solid black;
+}
+.gamePointsCPU{
+    font-size: 32px;
+    color: yellow;
+    border: 1px solid black;
+    min-width: 50px;
+    text-align: center;
+}
+
+.diceValueCPU{
+    font-size: 30px;
+    
+}
+.resultsCPU{
+    height: 120px;
+    width: 300px;
+}
+.winner{
+    display: block;
+    float: left;
+    
+    text-align: center;
+    
+    height: 24px;
+    
+}
+.diffText{
+    font-weight: bold;
+}
+.pointDifferences{
+    display: block;
+    color: yellow;
+    min-width: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.pointsDisplay{
+    display: flex;
+    flex-direction: row;
+    float: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 50px;
+}
+.game{
+    display: block;
+    background-color: orange;
+    border: 1px solid black;
+   /* height: 50vh;*/
+    padding: 20px;
+    float: left;
+}
+
+.game::after{
+    content:"";
+    display: block;
+    clear: both; 
+}
+.players{
+    display: block;
+    float: left;
+    background-color: yellow;
+    border: 1px solid black;
+    height: 100%;
+    width: 1000px;
+    padding: 20px;
+}
+
+.protocol{
+    display: block;
+    width: 350px;
+}
+.protocol::before{
+    content:"";
+    display: block;
+    clear: both;
+}
+
+.endText{
+    font-weight: bold;
+    border: 1px solid black;
+    background-color: aqua;
+}
+
+/* Guess Number*/
+
+.spanTries{
+    border: 1px solid black;
+    background-color: red;
+    color: white;
+    width: 30px;
+}
+
+.labelTries{
+    float: left;
+}
+
+.manuals{
+    padding: 10px;
+    width: 90vw;
+    border: 1px solid black;
+}
+.manuals ol{
+    margin: 10px;
+    border: 1px solid black;
+}
+
+.manualDicegame{
+    /*background-color: blueviolet;*/
+    margin: 5px;
+   
+}
+
+.manualGuessNumber{
+
+   margin: 5px;
+    
+}
+/*  Würfelspiel 2   */
+.dicegame2{
+    display: block;
+    margin-top: 10px;
+    
+    
+    padding: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.gameDice2{
+    display: block;
+    background-color: orange;
+    border: 1px solid black;
+   /* height: 50vh;*/
+    padding: 20px;
+    float: left;
+    width: 500px;
+}
+.gameDice2::after{
+    display: block;
+    content: "";
+    clear: both;
+}
+.gameResultsDice2{
+    display: block;
+    margin-top: 150px;
+    width: 500px;
+    border: 1px solid black;
+}
+.otPoints{
+    color: red;
+    font-size: 32px;
+}
+
+.finalPoints{
+    color: green;
+    font-size: 40px;
+}
+.overThrown{
+    font-size: 24px;
+    font-weight: bold;
+}
+.diceSymbol{
+    font-size: 30px;
+}

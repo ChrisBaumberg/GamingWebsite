@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+ 
+   
+
+    <title>Gaming-Website: Wie?</title>
+    <div class="top-nav">
+        <a href="index.html">Startseite</a>
+        <a href="dicegame.html" > Würfelspiel</a>
+        <a href="dicegameCPU.html">Würfelspiel CPU</a>
+        <a href="dicegame2.html">Würfelspiel 2</a>
+        <a href="dicegame2auto.html">Würfelspiel 2 Automatisch</a>
+        <a href="guessnumber.html">Zahlraten</a>
+        <a href="manual.html" id="active-page">Wie spielt man?</a>
+    </div>
+    <h1>Wie spielt man? - Das Handbuch</h1>
+</head>
+<body>
+    <div class="standard-container">
+        <div class="manuals">
+        <ol>
+            <div class="manualDicegame">
+            <li><h3>Das Würfelspiel</h3>
+                <ol>
+                    <li>Spielvorbereitungen:
+                        <ul>
+                            <li>
+                                Namen im Namenfeld eintragen
+                            </li>
+                            <li>Zielpunktzahl ins Zielfeld eintragen</li>
+                            <li>Button "Starten" drücken</li>
+                        </ul>
+                    </li>
+                    <li>Das Spiel:
+                        <ul>
+                            <li>Button "Würfeln" drücken:
+                                </li>   
+                                    <li>Solange du keine 6 würfelst kannst du weiterspielen oder deine Punktzahl speichern
+
+                                    </li>
+                                    <li>
+                                        Solltest du eine 6 würfeln, verlierst du alle ungespeicherten Punkte
+                                    </li>
+                                    <li>
+                                        Sobald du deine Punkte speicherst oder eine 6 würfelst, ist die CPU dran
+                                    </li>
+                                    <li>
+                                        Alle gespeicherten Punkte werden addiert
+                                    </li>
+                                    <li>Die CPU speichert ihre Punkte immer, wenn sie mindestens 8 Punkte hat.</li>
+                            
+                            
+
+                            
+                        </ul>
+                    </li>
+                    <li>Das Ziel:
+                        <ul>
+                            <li>
+                                Sobald die Zielpunktzahl (von dir oder der CPU) erreicht wird, ist das Spiel beendet.
+                            </li>
+                            <li>Gewinner ist der Spieler, der als erstes die Zielpunktzahl erreicht.
+                            </li>
+                            <li>Für die Zielpunktzahl zählen nur gespeicherte Punkte.</li>
+                            <li>Alle Würf werden unter dem Spielfeld dokumentiert.</li>
+                            <li>Die Gewinnerpunkte errechnen sich wie folgt:
+                                <br>
+                                (Zielpunktzahl - Punktezahl Verlierer)/(Zielpunktzahl/100)<br>
+                                (Beispiel: Zielpunktzahl: 100; Punktezahl Verlierer: 80 <br>
+                                Gewinnerpunkte = (100-80)/(100/100) = 20/1 = <b>20</b>)
+                            </li>
+                            <li>
+                                Nochmal?<br>
+                                Klicke auf "Alles Löschen" und starte erneut. (Du kannst mit denselben Eingaben spielen oder die Eingaben beliebig ändern)
+                            </li>
+                        </ul>
+                    </li>
+                
+                </ol>
+            </div>
+            </li>
+            <div class="manualGuessNumber">
+            <li><h3>Das Zahlenraten</h3>
+                <ol>
+                    <li>Spielvorbereitungen:
+                        <ul>
+                            <li>
+                                Bestimme den Zahlenbereich<br>
+                                Der Zahlenbereich startet bei 0 und endet bei deiner Eingabe
+                            </li>
+                            <li>
+                                Drücke den "Start"-Knopf
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Das Spiel:
+                        <ul>
+                            <li>Gib deine Vermutung ein und drücke auf "OK"</li>
+                            <li>
+                                Wenn du die Zahl nicht errätst, bekommst du einen Hinweis, ob die Zahl zu hoch oder zu niedrig ist
+                            </li>
+                            <li>
+                                Wenn du die Zahl richtig errätst, ist das Spiel vorbei und du bekommst die Information, wie viele Versuche du benötigt hast.
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </div>
+    </div>
+    </div>
+</body>
+</html>

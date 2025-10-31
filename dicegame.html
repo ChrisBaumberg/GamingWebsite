@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+  
+  
+    <title>Gaming-Website: Würfelspiel </title>
+
+    <link rel="icon" href="./images/diceFavicon.ico" type="image/x-icon">
+    
+    <div class="top-nav">
+        <a href="index.html">Startseite</a>
+        <a href="dicegame.html" id="active-page">Würfelspiel</a>
+        <a href="dicegameCPU.html">Würfelspiel CPU</a>
+        <a href="dicegame2.html">Würfelspiel 2</a>
+        <a href="dicegame2auto.html">Würfelspiel 2 Automatisch</a>
+        <a href="guessnumber.html">Zahlraten </a>
+    </div>
+    <h1>Willkommen beim Würfelspiel</h1>
+</head>
+<body>
+    <div class="standard-container">
+        <div>
+            <a href="manual.html"><button>Wie spielt man? </button></a>
+        </div>
+        <div class="game">
+            
+        <div class="game-preparation">
+            <label>Name:</label>
+            <input type="text" class="inputPlayerName"><br>
+            <label>Zielpunktzahl:</label>
+            <input type="number"        class="inputEndValue"><br>
+            <button onclick="startGame()" class="btnStart">Start</button>
+            <button class="btnReset" disabled onclick="resetForm()">Alles Löschen</button>
+        </div>
+        <div class="pointsDisplay">
+            <label for="gamePoints"><span class="playerName"></span></label><br>
+        <label class="gamePoints">0</label>
+        <label class="pointDifferences">:</label>
+        <label for="gamePointsCPU">CPU</label><br>
+        <label class="gamePointsCPU">0</label>
+        
+        </div>
+        <br>
+        <div class="players">
+        <div class="player">
+            <label class="labelDV">Würfelzahl:</label><br>
+            <label class="diceValue">0</label><br>
+            <label class="labelSP">Sessionpunkte:</label><br>
+            <label class="sessionPoints">0</label><br>
+            <button class="btnGoon" onclick="gameLoop()" disabled>Würfeln</button>
+            <button class="btnSafe" onclick="safePoints()"disabled>Sichern</button><br>
+            <label class="labelGP">Gesamtpunktzahl:</label><br>
+            
+            
+            <textarea class="results" readonly ></textarea>
+        </div>
+        <div class="CPU">
+            <label class="labelDV">Würfelzahl:</label><br>
+            <label class="diceValueCPU">0</label><br>
+            <label class="labelSP">Sessionpunkte:</label><br>
+            <label class="sessionPointsCPU">-</label><br>
+            <div class="CPU-decission"></div>
+            <label class="labelGPCPU">Gesamtpunktzahl:</label><br>
+            <br><br>
+            <textarea class="resultsCPU" readonly ></textarea>
+        </div>
+    </div><br>
+        <h2 class="winner"></h2>
+    </div>
+        <div class="protocol">
+            <h4>Würfe <span class="playerName"></span></h4>
+            <ul class="protocolPlayer">
+                
+            </ul>
+            <div class="points">
+                
+            </div>
+            <h4>Würfe CPU</h4>
+            <ul class="protocolCPU">
+               
+            </ul>
+        </div>
+    </div>
+    <script src="dicegame.js"></script>
+</body>
+</html>
