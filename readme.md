@@ -12,3 +12,5 @@ Das 1. Würfelspiel kann man als User gegen das Programm spielen.
 Man kann allerdings auch das Programm alleine spielen lassen.
 
 Das 2. Würfelspiel kann man alleine spielen, oder man lässt das Programm alleine spielen.
+
+Ein Handbuch für alle Spiele findet man, wenn man unter "Wie spielt man?"
