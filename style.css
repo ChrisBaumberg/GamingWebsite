@@ -1,61 +1,135 @@
+/* --- Allgemeines Styling --- */
+
 :root{
     ---color1: yellow;
     ---color2: black;
     ---color3: red;
     ---color4: white;
+    ---color5: yellowgreen;
+    ---color6: blue;
+    ---color7: rgba(120,45,200,0.5);
 }
 
-*{
+
+body{
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 16px;
-}
-a{
-    color: var(---color2);
-    font-weight: lighter;
-    text-decoration: none;
-}
-.top-nav{
-    display: block;
-    background-color: var(---color1);
-    height: 50px;
-    font-size: 24px;
-    padding-top: 16px;
+    margin: 0;  
     
 }
-.top-nav a{
-    font-size: 24px;
-    border: 1px solid black;
-    margin-left: 10px;
-    height: 100%;
+
+h1, h2, h3, h4, h5, h6{
+    text-align: center;
 }
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+
+
+/* --- Hilfsklassen ---*/
+
+.standard-container{
+    display: flex; 
+}
+
+/* --- Topline --- */
+
+.topline{
+    background-color: var(---color5);
+    position: absolute;
+    font-size: 24px;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 88px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.topline h1{
+    margin-left: 20px;
+}
+
+/* --- Navigation --- */
+
+.top-nav{
+    width: 12%;
+    font-size: 24px;
+    background-color: var(---color1);
+    padding-top: 88px;
+    min-height: 100vh;
+}
+
+.top-nav a{
+    display: block;
+    text-decoration: none;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    color: var(---color2);
+}
+
 .top-nav a:hover{
     background-color: var(---color2);
-    color: var(---color1);
+    color: var(---color3);
+    
 }
-#active-page{
-  
-    width: 50px;
-    background-color: var(---color3);
-    color: var(---color4);
-    content: ">";
+.active-page{
+    background-color: var(---color7);
+}
+
+.top-nav .active-page a{
+    color: var(---color3);
+}
+
+/* --- Content --- */
+
+.content{
+    width: 87%;
+    padding: 32px;
+    margin-top: 88px;
+    background-color: rgba(55,255,255,0.1);
+}
+
+/* --- Homepage --- */
+
+.homepage{
+    margin-bottom: 50px;
 }
 
 .gameList{
-    display: block;
+    
     width: 250px;
     background-color: aqua;
 }
+
+.gameList a{
+    color: var(---color2)
+}
+
 .gameList a:hover{
     color: white;
     background-color: green;
 }
 
-/* Würfelspiel*/
+/* --- Würfelrennen --- */
+
 .game{
     margin-top: 50px;
 }
+
+.labelGP{
+    margin: 0;
+}
 .sessionPoints{
-    width: 50px;
+    
     border: 1px solid black;
 }
 .gamePoints{
@@ -66,13 +140,9 @@ a{
     text-align: center;
 }
 .diceValue{
-    
-    font-size: 30px;
-    
+    font-size: 30px; 
 }
-.standard-container{
-    padding: 10px;
-}
+
 .player{
     display: block;
     float: left;
@@ -84,9 +154,12 @@ a{
 
 .results{
     margin-top: 20px;
+    text-align: center;
+    
     height: 120px;
     width: 300px;
 }
+
 .CPU{
     display: block;
     float: left;
@@ -104,9 +177,10 @@ a{
 }
 
 .sessionPointsCPU{
-    width: 50px;
+    
     border: 1px solid black;
 }
+
 .gamePointsCPU{
     font-size: 32px;
     color: yellow;
@@ -120,78 +194,192 @@ a{
     
 }
 .resultsCPU{
+    
+    text-align: center;
+    
     height: 120px;
     width: 300px;
 }
+
 .winner{
-    display: block;
-    float: left;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     
     height: 24px;
     
 }
+
 .diffText{
     font-weight: bold;
 }
+
 .pointDifferences{
     display: block;
     color: yellow;
-    min-width: 50px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    min-width: 48px;
+    margin-top: 8px;
+    margin-bottom: 8px;
     text-align: center;
 }
+
 .pointsDisplay{
     display: flex;
     flex-direction: row;
-    float: left;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding-left: 50px;
+
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding-left: 48px;
 }
+
 .game{
-    display: block;
+    display: flex;
+    flex-direction: column;
     background-color: orange;
     border: 1px solid black;
-   /* height: 50vh;*/
-    padding: 20px;
-    float: left;
+    justify-content: center;
+    align-items: start;
+    padding: 20px; 
+    width: 90%;
 }
 
-.game::after{
-    content:"";
-    display: block;
-    clear: both; 
-}
-.players{
-    display: block;
-    float: left;
-    background-color: yellow;
-    border: 1px solid black;
-    height: 100%;
-    width: 1000px;
-    padding: 20px;
-}
-
-.protocol{
-    display: block;
-    width: 350px;
-}
-.protocol::before{
-    content:"";
-    display: block;
-    clear: both;
-}
-
-.endText{
-    font-weight: bold;
-    border: 1px solid black;
+.game-prepearation{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     background-color: aqua;
 }
 
-/* Guess Number*/
+.players{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: yellow;
+    border: 1px solid black;
+    height: 100%;
+    max-width: 50%;
+    padding: 20px;
+}
+.player{
+    text-align: center;
+}
+
+.CPU {
+    text-align: center;    
+}
+
+.protocol{
+    display: flex;
+    width: 100%;
+    padding: 8px; 
+}
+
+.points{
+    display: flex;
+    border : 1px solid black;
+    width: 30%;
+    background-color: aqua;
+    height: 300px;
+    margin: 8px;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+
+.protocolPlayer{
+    display: flex;
+    width: 30%;
+}
+
+.protocolCPU{
+    display: flex;
+    width: 30%;   
+}
+
+.diffTextW{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.endText{
+    display: flex;
+    font-weight: bold;
+    border: 1px solid black;
+    background-color: blue;
+    margin: 8px;
+    padding: 8px;
+}
+
+/* --- Würfelziel --- */
+
+.dicegame2{
+    display: block;
+    margin-top: 10px;        
+    padding: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.gameDice2{
+    display: block;
+    background-color: orange;
+    border: 1px solid black;
+    padding: 20px;
+    float: left;
+    width: 500px;
+}
+
+.gameDice2::after{
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.gameResultsDice2{
+    display: block;
+    margin-top: 150px;
+    width: 500px;
+    border: 1px solid black;
+}
+
+.otPoints{
+    color: red;
+    font-size: 32px;
+}
+
+.finalPoints{
+    color: green;
+    font-size: 40px;
+}
+
+.overThrown{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.diceSymbol{
+    font-size: 30px;
+}
+
+/* --- Guess Number --- */
+
+.gameGN{
+    display: flex;
+    flex-direction: column;
+    background-color: orange;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: start;
+    padding: 20px; 
+    width: 90%;
+    margin-top: 8px;
+}
 
 .spanTries{
     border: 1px solid black;
@@ -204,70 +392,45 @@ a{
     float: left;
 }
 
+/* --- Handbuch --- */
+
 .manuals{
-    padding: 10px;
-    width: 90vw;
-    border: 1px solid black;
-}
-.manuals ol{
-    margin: 10px;
-    border: 1px solid black;
+    background-color: green;
+    padding: 8px;
 }
 
-.manualDicegame{
-    /*background-color: blueviolet;*/
-    margin: 5px;
-   
+.manuals ol li ol{
+     list-style: decimal;
+     padding: 8px;
 }
 
-.manualGuessNumber{
+.manuals ol li ul li{
+    list-style: disc;
+}
 
-   margin: 5px;
-    
-}
-/*  Würfelspiel 2   */
-.dicegame2{
-    display: block;
-    margin-top: 10px;
-    
-    
-    padding: 5px;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-.gameDice2{
-    display: block;
-    background-color: orange;
+.manualCards{
+    margin: 8px;   
     border: 1px solid black;
-   /* height: 50vh;*/
-    padding: 20px;
-    float: left;
-    width: 500px;
-}
-.gameDice2::after{
-    display: block;
-    content: "";
-    clear: both;
-}
-.gameResultsDice2{
-    display: block;
-    margin-top: 150px;
-    width: 500px;
-    border: 1px solid black;
-}
-.otPoints{
-    color: red;
-    font-size: 32px;
+    background-color: yellow;
 }
 
-.finalPoints{
-    color: green;
-    font-size: 40px;
+
+
+.manualCards ol li{
+    list-style: decimal;
+    margin-left: 16px;
 }
-.overThrown{
-    font-size: 24px;
-    font-weight: bold;
+
+/*--- Footer ---*/
+
+.footer{
+    padding: 100px;
+    text-align: center;
+    background-color: var(---color6);
+    color: var(---color4);            
 }
-.diceSymbol{
-    font-size: 30px;
+
+.footer a{
+    text-decoration: none;
+    color: var(---color4);    
 }

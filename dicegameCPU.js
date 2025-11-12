@@ -72,8 +72,8 @@ rounds=1
 lostpoints=0
 results=""
 diceValuesPlayer =[]
-document.querySelector(".protocolPlayer").textContent="";
-protocolInputPlayerList=document.querySelector(".protocolPlayer");
+document.querySelector(".pointsCPU1").textContent="";
+protocolInputPlayerList=document.querySelector(".pointsCPU1");
     
 function getRandomInt(min, max) {
     /* Random Number */
@@ -200,8 +200,8 @@ lostpointsCPU=0
 resultsCPU=""
 diceValuesCPU = []
 
-document.querySelector(".protocolCPU").textContent="";
-    protocolInputCPUList=document.querySelector(".protocolCPU");
+document.querySelector(".pointsCPU2").textContent="";
+    protocolInputCPUList=document.querySelector(".pointsCPU2");
     
 function CPUPlay(){
     /* set player*/
@@ -432,7 +432,7 @@ function gameOver(player){
     document.querySelector(".btnStart").disabled=false
     document.querySelector(".points").style.border =" 1px solid black"
     document.querySelector(".points").style.backgroundColor="yellowgreen"
-    document.querySelector(".points").innerHTML = `CPU 1 ${gamepoints}:${gamepointsCPU} CPU 2` +"<br>"+  `${diffText}`
+    document.querySelector(".points").innerHTML = `STOP! <br> Endergebnis: <br> CPU 1 ${gamepoints}:${gamepointsCPU} CPU 2<br>` +"<br>"+  `<br> ${diffText}`
     document.querySelector(".pointDifferences").innerHTML= diffText2
    console.log(winner)  
 }

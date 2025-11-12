@@ -8,21 +8,26 @@
     
     <script src="guessnumber.js"></script>
     <title>Gaming-Website: Zahlraten</title>
-    <div class="top-nav">
-        <a href="index.html">Startseite</a>
-        <a href="dicegame.html" >Würfelspiel</a><a href="dicegameCPU.html">Würfelspiel CPU</a>  
-        <a href="dicegame2.html">Würfelspiel 2</a>
-        <a href="dicegame2auto.html">Würfelspiel 2 Automatisch</a>
-        <a href="guessnumber.html" id="active-page">Zahlraten</a>
-    </div>
+    
 </head>
 <body>
+    <div class="topline">
+        <h1>Gaming-Website - Zahlenraten</h1>
+    </div>
     <div class="standard-container">
-        <h1>Rate die Zahl!</h1>
-        <div>
+        <div class="top-nav">
+        <a href="index.html">Startseite</a>
+        <a href="dicegame.html">Würfelrennen</a>
+        <a href="dicegameCPU.html">Würfelrennen CPU</a>
+        <a href="dicegame2.html">Würfelziel</a>
+        <a href="dicegame2auto.html">Würfelziel Automatisch</a>
+        <a href="guessnumber.html" class="active-page">Zahlraten </a>
+    </div>
+    <div class="content">    
+    <div>
             <a href="manual.html"><button>Wie spielt man? </button></a>
         </div>
-    <div class="game">
+    <div class="gameGN">
        
     <label>Der Zahlenbereich:</label>
     <input type="number" class="maxValue">
@@ -34,5 +39,13 @@
     <label class="labelTries"></label>    
 </div>
 </div>
+</div>
+<div class="footer">
+        <ul>
+            <li>&#169 <span id="year"> </span> ChrisWebDevelopment</li>
+            <li><a href="#">Impressum</a></li>
+            <li><a href="#">Datenschutz</a></li>
+        </ul>
+        </div>
 </body>
 </html>

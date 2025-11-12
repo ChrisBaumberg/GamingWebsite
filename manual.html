@@ -8,23 +8,29 @@
    
 
     <title>Gaming-Website: Wie?</title>
-    <div class="top-nav">
-        <a href="index.html">Startseite</a>
-        <a href="dicegame.html" > Würfelspiel</a>
-        <a href="dicegameCPU.html">Würfelspiel CPU</a>
-        <a href="dicegame2.html">Würfelspiel 2</a>
-        <a href="dicegame2auto.html">Würfelspiel 2 Automatisch</a>
-        <a href="guessnumber.html">Zahlraten</a>
-        <a href="manual.html" id="active-page">Wie spielt man?</a>
-    </div>
-    <h1>Wie spielt man? - Das Handbuch</h1>
+    
+   
 </head>
 <body>
+    <div class="topline">
+        <h1>Gaming-Website - Handbuch</h1>
+    </div>
+    
     <div class="standard-container">
+        <div class="top-nav">
+        <a href="index.html">Startseite</a>
+        <a href="dicegame.html">Würfelrennen</a>
+        <a href="dicegameCPU.html">Würfelrennen CPU</a>
+        <a href="dicegame2.html">Würfelziel</a>
+        <a href="dicegame2auto.html">Würfelziel Automatisch</a>
+        <a href="guessnumber.html">Zahlraten </a>
+        <a href="manual.html" class="active-page">Wie spielt man?</a>
+    </div>
+    <div class="content">
         <div class="manuals">
         <ol>
-            <div class="manualDicegame">
-            <li><h3>Das Würfelspiel</h3>
+            <div class="manualCards">
+            <li><h3>Das Würfelrennen</h3>
                 <ol>
                     <li>Spielvorbereitungen:
                         <ul>
@@ -52,10 +58,6 @@
                                         Alle gespeicherten Punkte werden addiert
                                     </li>
                                     <li>Die CPU speichert ihre Punkte immer, wenn sie mindestens 8 Punkte hat.</li>
-                            
-                            
-
-                            
                         </ul>
                     </li>
                     <li>Das Ziel:
@@ -83,7 +85,43 @@
                 </ol>
             </div>
             </li>
-            <div class="manualGuessNumber">
+            <li><div class="manualCards">
+                <h3>Würfelziel</h3>
+                <ol>
+                    <li>
+                        Spielvorbereitungen:
+                        <ul>
+                            <li>
+                                Bestimme die Zielpunktzahl
+                            </li>
+                            <li>
+                                Drücke den "Start"-Knopf
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        Das Spiel:
+                        <ul>
+                            <li>
+                                Würfel sooft, bis du exakt die Zielpunktzahl triffst
+                            </li>
+                            <li>
+                                Überwürfe werden nicht gezählt
+                            </li>
+                        </ul>
+                        <li>
+                            Die Punkte:
+                            <ul>
+                                 <li>(Zielpunktzahl - minimale Versuche)/(Zielpunktzahl/100) - Überwürfe
+                                </li>
+                                <li>minimale Versuche = Zielpunktzahl/6 (aufgerundet) - ist die Anzahl der Versuche, die mindestens benötigt werden. (Funktioniert nur, wenn immer 6en gewürfelt werden. - Ist sehr unwahrscheinlich)</li>
+                            </ul>
+                        </li>
+                    </li>
+                </ol>
+            </div>
+            </li>
+            <div class="manualCards">
             <li><h3>Das Zahlenraten</h3>
                 <ol>
                     <li>Spielvorbereitungen:
@@ -114,5 +152,13 @@
     </div>
     </div>
     </div>
+    </div>
+    <div class="footer">
+        <ul>
+            <li>&#169 <span id="year"> </span> ChrisWebDevelopment</li>
+            <li><a href="#">Impressum</a></li>
+            <li><a href="#">Datenschutz</a></li>
+        </ul>
+        </div>
 </body>
 </html>

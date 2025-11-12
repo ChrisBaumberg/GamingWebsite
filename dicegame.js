@@ -60,8 +60,8 @@ function resetForm(){
     console.log("Neues Spiel")
     document.querySelector(".player").style.backgroundColor="white"
     document.querySelector(".CPU").style.backgroundColor="white"
-    document.querySelector(".protocolPlayer").textContent="";
-    document.querySelector(".protocolCPU").textContent="";
+    document.querySelector(".pointsPlayer").textContent="";
+    document.querySelector(".pointsCPU").textContent="";
     document.querySelector(".points").innerHTML = ""
     document.querySelector(".pointDifferences").innerHTML=":"
 }
@@ -76,8 +76,8 @@ rounds=0
 lostpoints=0
 results=""
 diceValuesPlayer =[]
-document.querySelector(".protocolPlayer").textContent="";
-protocolInputPlayerList=document.querySelector(".protocolPlayer");
+document.querySelector(".pointsPlayer").textContent="";
+protocolInputPlayerList=document.querySelector(".pointsPlayer");
     
 function getRandomInt(min, max) {
     /* Random Number */
@@ -199,8 +199,8 @@ lostpointsCPU=0
 resultsCPU=""
 diceValuesCPU = []
 
-document.querySelector(".protocolCPU").textContent="";
-    protocolInputCPUList=document.querySelector(".protocolCPU");
+document.querySelector(".pointsCPU").textContent="";
+    protocolInputCPUList=document.querySelector(".pointsCPU");
     
 function CPUPlay(){
     /* set player*/
@@ -385,23 +385,26 @@ function gameOver(player){
     if (gamepoints < gamepointsCPU){
         points=endValue -gamepoints
         protocolInputCPU=document.createElement("li")
-    diceThrowCPUText="Ende: Gewinner mit "+gamepointsCPU+" Punkten";
-    protocolInputCPU.innerText=diceThrowCPUText;
+    diceThrowCPUText="<span class='endText'>Ende: Gewinner mit "+gamepointsCPU+" Punkten</span>";
+    protocolInputCPU.innerHTML=diceThrowCPUText;
             protocolInputCPUList.appendChild(protocolInputCPU);
             protocolInputPlayer=document.createElement("li");
-    diceThrowText="Ende: Verlierer mit "+gamepoints+" Punkten";
-        protocolInputPlayer.innerText= diceThrowText;
+    diceThrowText="<span class='endText'>Ende: Verlierer mit "+gamepoints+" Punkten</span>";
+        
+        
+        protocolInputPlayer.innerHTML= diceThrowText;
         protocolInputPlayerList.appendChild(protocolInputPlayer)
     }
     else{
         points=endValue -gamepointsCPU
         protocolInputCPU=document.createElement("li")
-    diceThrowCPUText="Ende: Verlierer mit "+gamepointsCPU+" Punkten";
-    protocolInputCPU.innerText=diceThrowCPUText;
+    diceThrowCPUText="<span class='endText'>Ende: Verlierer mit "+gamepointsCPU+" Punkten</span>";
+    protocolInputCPU.innerHTML=diceThrowCPUText;
             protocolInputCPUList.appendChild(protocolInputCPU);
             protocolInputPlayer=document.createElement("li");
-    diceThrowText="Ende: Gewinner mit "+gamepoints+" Punkten";
-        protocolInputPlayer.innerText= diceThrowText;
+    diceThrowText="<span class='endText'>Ende: Gewinner mit "+gamepoints+" Punkten</span>";
+        
+        protocolInputPlayer.innerHTML= diceThrowText;
         protocolInputPlayerList.appendChild(protocolInputPlayer)
     }
     points=points/(endValue/100)
@@ -409,11 +412,11 @@ function gameOver(player){
 
     diff= gamepoints - gamepointsCPU
     if (diff < 0){
-            diffText=`<b>CPU</b> hat ${-diff} Punkte mehr erzielt!`
+            diffText=`<br><b>CPU</b> hat ${-diff} Punkte mehr erzielt!`
             diffText2=`: <br> <span class="diffText">${-diff} &#11166 </span>`
     }
     else{
-        diffText=`<b>${player}</b> hat ${diff} Punkte mehr erzielt!`
+        diffText=`<br><b>${player}</b> hat ${diff} Punkte mehr erzielt!`
         diffText2=` : <br> <span class="diffText">&#11164 ${diff}</span>`
     }
    winner=`${player} ist der Gewinner mit ${points} Punkten`
@@ -421,11 +424,11 @@ function gameOver(player){
    document.querySelector(".btnGoon").disabled=true
     document.querySelector(".btnSafe").disabled=true
     document.querySelector(".btnStart").disabled=false
-    document.querySelector(".points").style.border =" 1px solid black"
+    
     document.querySelector(".points").style.backgroundColor="yellowgreen"
-    document.querySelector(".points").innerHTML = `${gamePlayer} ${gamepoints}:${gamepointsCPU} CPU` +"<br>"+  `${diffText}`
+    document.querySelector(".points").innerHTML = `STOP<br>Endergebnis:<br>${gamePlayer} ${gamepoints}:${gamepointsCPU} CPU <br><div class="diffTextW">${diffText}</div>`
     document.querySelector(".pointDifferences").innerHTML= diffText2
-   console.log(winner)  
+
 }
 
 function playDiceSound(){

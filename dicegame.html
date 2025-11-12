@@ -10,18 +10,23 @@
 
     <link rel="icon" href="./images/diceFavicon.ico" type="image/x-icon">
     
-    <div class="top-nav">
-        <a href="index.html">Startseite</a>
-        <a href="dicegame.html" id="active-page">Würfelspiel</a>
-        <a href="dicegameCPU.html">Würfelspiel CPU</a>
-        <a href="dicegame2.html">Würfelspiel 2</a>
-        <a href="dicegame2auto.html">Würfelspiel 2 Automatisch</a>
-        <a href="guessnumber.html">Zahlraten </a>
-    </div>
-    <h1>Willkommen beim Würfelspiel</h1>
+    
+   
 </head>
 <body>
+    <div class="topline">
+        <h1>Gaming-Website - Würfelrennen</h1>
+    </div>
     <div class="standard-container">
+        <div class="top-nav">
+        <a href="index.html">Startseite</a>
+        <a href="dicegame.html" class="active-page">Würfelrennen</a>
+        <a href="dicegameCPU.html">Würfelrennen CPU</a>
+        <a href="dicegame2.html">Würfelziel</a>
+        <a href="dicegame2auto.html">Würfelziel Automatisch</a>
+        <a href="guessnumber.html">Zahlraten </a>
+    </div>
+        <div class="content">
         <div>
             <a href="manual.html"><button>Wie spielt man? </button></a>
         </div>
@@ -61,29 +66,42 @@
             <label class="labelDV">Würfelzahl:</label><br>
             <label class="diceValueCPU">0</label><br>
             <label class="labelSP">Sessionpunkte:</label><br>
-            <label class="sessionPointsCPU">-</label><br>
+            <label class="sessionPointsCPU">0</label><br>
             <div class="CPU-decission"></div>
-            <label class="labelGPCPU">Gesamtpunktzahl:</label><br>
+            <label class="labelGP">Gesamtpunktzahl:</label><br>
             <br><br>
             <textarea class="resultsCPU" readonly ></textarea>
         </div>
-    </div><br>
-        <h2 class="winner"></h2>
     </div>
+        <h2 class="winner"></h2>
+    </div> 
         <div class="protocol">
+            <div class="protocolPlayer">
             <h4>Würfe <span class="playerName"></span></h4>
-            <ul class="protocolPlayer">
+            
+            <ul class="pointsPlayer">
                 
             </ul>
-            <div class="points">
-                
             </div>
+            <div class="points">
+               
+            </div>
+            <div class="protocolCPU">
             <h4>Würfe CPU</h4>
-            <ul class="protocolCPU">
+            <ul class="pointsCPU">
                
             </ul>
+            </div>
         </div>
     </div>
+    </div>
     <script src="dicegame.js"></script>
+    <div class="footer">
+        <ul>
+            <li>&#169 <span id="year"> </span> ChrisWebDevelopment</li>
+            <li><a href="#">Impressum</a></li>
+            <li><a href="#">Datenschutz</a></li>
+        </ul>
+        </div>
 </body>
 </html>
